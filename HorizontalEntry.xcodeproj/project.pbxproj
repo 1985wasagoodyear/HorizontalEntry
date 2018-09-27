@@ -8,24 +8,64 @@
 
 /* Begin PBXBuildFile section */
 		3F641881215D6A3300E58F7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F641880215D6A3300E58F7A /* AppDelegate.swift */; };
-		3F641883215D6A3300E58F7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F641882215D6A3300E58F7A /* ViewController.swift */; };
+		3F641883215D6A3300E58F7A /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F641882215D6A3300E58F7A /* SampleViewController.swift */; };
 		3F641886215D6A3300E58F7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F641884215D6A3300E58F7A /* Main.storyboard */; };
 		3F641888215D6A3500E58F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F641887215D6A3500E58F7A /* Assets.xcassets */; };
 		3F64188B215D6A3500E58F7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F641889215D6A3500E58F7A /* LaunchScreen.storyboard */; };
+		3F64189D215D6DC600E58F7A /* HETableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F64189B215D6DC600E58F7A /* HETableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F6418A0215D6DC600E58F7A /* HETableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F641899215D6DC600E58F7A /* HETableView.framework */; };
+		3F6418A1215D6DC600E58F7A /* HETableView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F641899215D6DC600E58F7A /* HETableView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3F6418A6215D6DD300E58F7A /* HETableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F641892215D6DAC00E58F7A /* HETableView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F64189E215D6DC600E58F7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F641875215D6A3300E58F7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F641898215D6DC600E58F7A;
+			remoteInfo = HETableView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3F6418A5215D6DC600E58F7A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3F6418A1215D6DC600E58F7A /* HETableView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F64187D215D6A3300E58F7A /* HorizontalEntry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorizontalEntry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F641880215D6A3300E58F7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F641882215D6A3300E58F7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F641882215D6A3300E58F7A /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		3F641885215D6A3300E58F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F641887215D6A3500E58F7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F64188A215D6A3500E58F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F64188C215D6A3500E58F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F641892215D6DAC00E58F7A /* HETableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HETableView.swift; sourceTree = "<group>"; };
+		3F641899215D6DC600E58F7A /* HETableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HETableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F64189B215D6DC600E58F7A /* HETableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HETableView.h; sourceTree = "<group>"; };
+		3F64189C215D6DC600E58F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3F64187A215D6A3300E58F7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F6418A0215D6DC600E58F7A /* HETableView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F641896215D6DC600E58F7A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				3F64187F215D6A3300E58F7A /* HorizontalEntry */,
+				3F64189A215D6DC600E58F7A /* HETableView */,
 				3F64187E215D6A3300E58F7A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				3F64187D215D6A3300E58F7A /* HorizontalEntry.app */,
+				3F641899215D6DC600E58F7A /* HETableView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				3F641880215D6A3300E58F7A /* AppDelegate.swift */,
-				3F641882215D6A3300E58F7A /* ViewController.swift */,
+				3F641882215D6A3300E58F7A /* SampleViewController.swift */,
 				3F641884215D6A3300E58F7A /* Main.storyboard */,
 				3F641887215D6A3500E58F7A /* Assets.xcassets */,
 				3F641889215D6A3500E58F7A /* LaunchScreen.storyboard */,
@@ -64,7 +106,28 @@
 			path = HorizontalEntry;
 			sourceTree = "<group>";
 		};
+		3F64189A215D6DC600E58F7A /* HETableView */ = {
+			isa = PBXGroup;
+			children = (
+				3F64189B215D6DC600E58F7A /* HETableView.h */,
+				3F641892215D6DAC00E58F7A /* HETableView.swift */,
+				3F64189C215D6DC600E58F7A /* Info.plist */,
+			);
+			path = HETableView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3F641894215D6DC600E58F7A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F64189D215D6DC600E58F7A /* HETableView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		3F64187C215D6A3300E58F7A /* HorizontalEntry */ = {
@@ -74,15 +137,35 @@
 				3F641879215D6A3300E58F7A /* Sources */,
 				3F64187A215D6A3300E58F7A /* Frameworks */,
 				3F64187B215D6A3300E58F7A /* Resources */,
+				3F6418A5215D6DC600E58F7A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3F64189F215D6DC600E58F7A /* PBXTargetDependency */,
 			);
 			name = HorizontalEntry;
 			productName = HorizontalEntry;
 			productReference = 3F64187D215D6A3300E58F7A /* HorizontalEntry.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3F641898215D6DC600E58F7A /* HETableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F6418A2215D6DC600E58F7A /* Build configuration list for PBXNativeTarget "HETableView" */;
+			buildPhases = (
+				3F641894215D6DC600E58F7A /* Headers */,
+				3F641895215D6DC600E58F7A /* Sources */,
+				3F641896215D6DC600E58F7A /* Frameworks */,
+				3F641897215D6DC600E58F7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HETableView;
+			productName = HETableView;
+			productReference = 3F641899215D6DC600E58F7A /* HETableView.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +178,9 @@
 				ORGANIZATIONNAME = "Kevin Yu";
 				TargetAttributes = {
 					3F64187C215D6A3300E58F7A = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					3F641898215D6DC600E58F7A = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
@@ -113,6 +199,7 @@
 			projectRoot = "";
 			targets = (
 				3F64187C215D6A3300E58F7A /* HorizontalEntry */,
+				3F641898215D6DC600E58F7A /* HETableView */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +215,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3F641897215D6DC600E58F7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -135,12 +229,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F641883215D6A3300E58F7A /* ViewController.swift in Sources */,
+				3F641883215D6A3300E58F7A /* SampleViewController.swift in Sources */,
 				3F641881215D6A3300E58F7A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3F641895215D6DC600E58F7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F6418A6215D6DD300E58F7A /* HETableView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F64189F215D6DC600E58F7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F641898215D6DC600E58F7A /* HETableView */;
+			targetProxy = 3F64189E215D6DC600E58F7A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3F641884215D6A3300E58F7A /* Main.storyboard */ = {
@@ -281,6 +391,7 @@
 		3F641890215D6A3500E58F7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HorizontalEntry/Info.plist;
@@ -298,6 +409,7 @@
 		3F641891215D6A3500E58F7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HorizontalEntry/Info.plist;
@@ -309,6 +421,60 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3F6418A3215D6DC600E58F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HETableView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kevinyu.HETableView;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3F6418A4215D6DC600E58F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HETableView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kevinyu.HETableView;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -329,6 +495,15 @@
 			buildConfigurations = (
 				3F641890215D6A3500E58F7A /* Debug */,
 				3F641891215D6A3500E58F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F6418A2215D6DC600E58F7A /* Build configuration list for PBXNativeTarget "HETableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F6418A3215D6DC600E58F7A /* Debug */,
+				3F6418A4215D6DC600E58F7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
