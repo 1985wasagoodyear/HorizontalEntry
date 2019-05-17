@@ -15,7 +15,19 @@ import UIKit
 
 typealias Animation = (UITableViewCell, IndexPath, UITableView) -> Void
 
-public class HETableView: UITableView {
+extension UITableView {
+    open func slideInAnimation(duration durationFactor: TimeInterval,
+                               delay delayFactor: TimeInterval,
+                               for cell: UITableViewCell,
+                               at indexPath: IndexPath) {
+        let animation = HETableView.makeSlideIn(duration: durationFactor,
+                                                delayFactor: delayFactor)
+        let animator = Animator(animation: animation)
+        animator.animate(cell: cell, at: indexPath, in: self)
+    }
+}
+
+private final class HETableView {
     
     public class func performAnimation(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         

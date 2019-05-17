@@ -13,7 +13,7 @@ class SampleViewController: UIViewController {
 
     let cellIdentifier = "cell"
     
-    @IBOutlet weak var tableView: HETableView!
+    @IBOutlet weak var tableView: UITableView!
     
     let sampleData = ["Dog", "Cat", "Rabbit", "Bread", "Kitten", "Horse"]
     
@@ -44,7 +44,9 @@ extension SampleViewController: UITableViewDataSource {
 
 extension SampleViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        HETableView.performAnimation(tableView, willDisplay: cell, forRowAt: indexPath)
+       // HETableView.performAnimation(tableView, willDisplay: cell, forRowAt: indexPath)
+        tableView.slideInAnimation(duration: 0.5, delay: 0.05,
+                                   for: cell, at: indexPath)
     }
 
 }
