@@ -20,24 +20,24 @@ extension UITableView {
                                delay delayFactor: TimeInterval,
                                for cell: UITableViewCell,
                                at indexPath: IndexPath) {
-        let animation = HETableView.makeSlideIn(duration: durationFactor,
+        let animation = HETableAnimationFactory.slideIn(duration: durationFactor,
                                                 delayFactor: delayFactor)
         let animator = Animator(animation: animation)
         animator.animate(cell: cell, at: indexPath, in: self)
     }
 }
 
-private final class HETableView {
+private final class HETableAnimationFactory {
     
     public class func performAnimation(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
-        //let animation = makeMoveUpWithBounce(rowHeight: cell.frame.height, duration: 1.0, delayFactor: 0.05)
-        let animation = HETableView.makeSlideIn(duration: 0.5, delayFactor: 0.05)
+        //let animation = moveUpWithBounce(rowHeight: cell.frame.height, duration: 1.0, delayFactor: 0.05)
+        let animation = HETableAnimationFactory.slideIn(duration: 0.5, delayFactor: 0.05)
         let animator = Animator(animation: animation)
         animator.animate(cell: cell, at: indexPath, in: tableView)
     }
     
-    static func makeMoveUpWithBounce(rowHeight: CGFloat, duration: TimeInterval, delayFactor: Double) -> Animation {
+    static func moveUpWithBounce(rowHeight: CGFloat, duration: TimeInterval, delayFactor: Double) -> Animation {
         return { cell, indexPath, tableView in
             cell.transform = CGAffineTransform(translationX: 0, y: rowHeight)
             
@@ -53,7 +53,7 @@ private final class HETableView {
         }
     }
     
-    static func makeSlideIn(duration: TimeInterval, delayFactor: Double) -> Animation {
+    static func slideIn(duration: TimeInterval, delayFactor: Double) -> Animation {
         return { cell, indexPath, tableView in
             cell.transform = CGAffineTransform(translationX: tableView.bounds.width, y: 0)
             
@@ -69,7 +69,6 @@ private final class HETableView {
 }
 
 final class Animator {
-    private var hasAnimatedAllCells = false
     private let animation: Animation
     
     init(animation: @escaping Animation) {
@@ -77,13 +76,7 @@ final class Animator {
     }
     
     func animate(cell: UITableViewCell, at indexPath: IndexPath, in tableView: UITableView) {
-        guard !hasAnimatedAllCells else {
-            return
-        }
-        
         animation(cell, indexPath, tableView)
-        
-        //  hasAnimatedAllCells = tableView.isLastVisibleCell(at: indexPath)
     }
     
 }

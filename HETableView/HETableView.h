@@ -2,8 +2,8 @@
 //  HETableView.h
 //  HETableView
 //
-//  Created by Kevin Yu on 9/27/18.
-//  Copyright © 2018 Kevin Yu. All rights reserved.
+//  Created by K Y on 6/3/19.
+//  Copyright © 2019 Kevin Yu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
