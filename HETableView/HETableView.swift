@@ -9,74 +9,38 @@
 // lots of cool ideas and inspiration by this neat fellow:
 // http://www.vadimbulavin.com/tableviewcell-display-animation/?utm_campaign=AppCoda%20Weekly&utm_medium=email&utm_source=Revue%20newsletter
 
-// can we better expand this as an extension?
-
-import UIKit
-
 typealias Animation = (UITableViewCell, IndexPath, UITableView) -> Void
 
+/// Animations will move towards this direction.
+/// ie. '.left' will start on the right and animate leftwards
+public enum AnimateDirection: Int {
+    case left, right, up, down
+}
+
 extension UITableView {
-    open func slideInAnimation(duration durationFactor: TimeInterval,
-                               delay delayFactor: TimeInterval,
-                               for cell: UITableViewCell,
-                               at indexPath: IndexPath) {
+    //
+    open func slideIn(duration durationFactor: TimeInterval,
+                      delay delayFactor: TimeInterval,
+                      for cell: UITableViewCell,
+                      at indexPath: IndexPath,
+                      direction: AnimateDirection = .left) {
         let animation = HETableAnimationFactory.slideIn(duration: durationFactor,
-                                                delayFactor: delayFactor)
+                                                delayFactor: delayFactor,
+                                                direction: direction)
         let animator = Animator(animation: animation)
         animator.animate(cell: cell, at: indexPath, in: self)
     }
-}
-
-private final class HETableAnimationFactory {
     
-    public class func performAnimation(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-        //let animation = moveUpWithBounce(rowHeight: cell.frame.height, duration: 1.0, delayFactor: 0.05)
-        let animation = HETableAnimationFactory.slideIn(duration: 0.5, delayFactor: 0.05)
+    open func bounceAnimation(duration durationFactor: TimeInterval,
+                               delay delayFactor: TimeInterval,
+                               for cell: UITableViewCell,
+                               at indexPath: IndexPath,
+                               direction: AnimateDirection = .left) {
+        let animation = HETableAnimationFactory.bounce(duration: durationFactor,
+                                                       delayFactor: delayFactor,
+                                                       direction: direction)
         let animator = Animator(animation: animation)
-        animator.animate(cell: cell, at: indexPath, in: tableView)
-    }
-    
-    static func moveUpWithBounce(rowHeight: CGFloat, duration: TimeInterval, delayFactor: Double) -> Animation {
-        return { cell, indexPath, tableView in
-            cell.transform = CGAffineTransform(translationX: 0, y: rowHeight)
-            
-            UIView.animate(
-                withDuration: duration,
-                delay: delayFactor * Double(indexPath.row),
-                usingSpringWithDamping: 0.4,
-                initialSpringVelocity: 0.1,
-                options: [.curveEaseInOut],
-                animations: {
-                    cell.transform = CGAffineTransform(translationX: 0, y: 0)
-            })
-        }
-    }
-    
-    static func slideIn(duration: TimeInterval, delayFactor: Double) -> Animation {
-        return { cell, indexPath, tableView in
-            cell.transform = CGAffineTransform(translationX: tableView.bounds.width, y: 0)
-            
-            UIView.animate(
-                withDuration: duration,
-                delay: delayFactor * Double(indexPath.row),
-                options: [.curveEaseInOut],
-                animations: {
-                    cell.transform = CGAffineTransform(translationX: 0, y: 0)
-            })
-        }
-    }
-}
-
-final class Animator {
-    private let animation: Animation
-    
-    init(animation: @escaping Animation) {
-        self.animation = animation
-    }
-    
-    func animate(cell: UITableViewCell, at indexPath: IndexPath, in tableView: UITableView) {
-        animation(cell, indexPath, tableView)
+        animator.animate(cell: cell, at: indexPath, in: self)
     }
     
 }

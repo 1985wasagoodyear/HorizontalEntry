@@ -16,6 +16,8 @@
 		3F95736822A5845C007FE731 /* HETableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F95736122A5845C007FE731 /* HETableView.framework */; };
 		3F95736922A5845C007FE731 /* HETableView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F95736122A5845C007FE731 /* HETableView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F95736D22A58467007FE731 /* HETableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F641892215D6DAC00E58F7A /* HETableView.swift */; };
+		3FC8AE1D2329155E0053F59A /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8AE1C2329155E0053F59A /* Animator.swift */; };
+		3FC8AE1F232915780053F59A /* HETableAnimationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8AE1E232915780053F59A /* HETableAnimationFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		3F95736122A5845C007FE731 /* HETableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HETableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F95736322A5845C007FE731 /* HETableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HETableView.h; sourceTree = "<group>"; };
 		3F95736422A5845C007FE731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC8AE1C2329155E0053F59A /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		3FC8AE1E232915780053F59A /* HETableAnimationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HETableAnimationFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 			children = (
 				3F95736322A5845C007FE731 /* HETableView.h */,
 				3F641892215D6DAC00E58F7A /* HETableView.swift */,
+				3FC8AE1E232915780053F59A /* HETableAnimationFactory.swift */,
+				3FC8AE1C2329155E0053F59A /* Animator.swift */,
 				3F95736422A5845C007FE731 /* Info.plist */,
 			);
 			path = HETableView;
@@ -238,6 +244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC8AE1F232915780053F59A /* HETableAnimationFactory.swift in Sources */,
+				3FC8AE1D2329155E0053F59A /* Animator.swift in Sources */,
 				3F95736D22A58467007FE731 /* HETableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
